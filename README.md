@@ -40,32 +40,31 @@ choco install jdk8 -y
 
 choco install android-sdk -y
 
-# will install platform, tools, etc... for android-25
+## will install platform, tools, etc... for android-25
 .\sdkmanager "platform-tools" "platforms;android-25" "build-tools;27.0.3" "extras;android;m2repository" "extras;google;m2repository"
 .\sdkmanager "emulator" 
 .\sdkmanager "system-images;android-25;google_apis;x86"
 
-# start android studio
-  # start sdk manager
-  - change the path of the sdk C:\Android\android-sdk
-    - suppose to have Android 7.1.1 (Nougat) 
-      - Android SDK platform 25
-      - Google API x86 Atom system image
+## start sdk manager from android studio
+- change the path of the sdk C:\Android\android-sdk
+  - suppose to have Android 7.1.1 (Nougat) 
+    - Android SDK platform 25
+    - Google API x86 Atom system image
 
-  # start avd manager
-  - device definition, next--
-  - select system image nougat api 25, next--
-  - graphics: hardware, change mem, camera, netwok, etc... 
+## start avd manager
+- device definition, next--
+- select system image nougat api 25, next--
+- graphics: hardware, change mem, camera, netwok, etc... 
 
-  suppose to create file in C:\Users\{username}\.android\avd\{devicename}
+suppose to create file in C:\Users\{username}\.android\avd\{devicename}
 
-# start the emulator, important: not the one from tool
-# pick one from the utils 
+## start the emulator, important: not the one from tool
+pick one from the utils 
 .\avdmanager.bat list avd 
 .\emulator.exe -avd {emulatorname}
 
 
-## Cordova setup
+# Cordova setup
 ``` bash
 
 # cmd:
@@ -78,6 +77,3 @@ cordova platform add android
 cordova run android
 
 ```
-
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
